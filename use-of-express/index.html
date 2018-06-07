@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examples</title>
+</head>
+<body>
+    <h1>Routing</h1>
+    <ul>
+        <li>
+            GET request to the homepage "/"
+            <form action="/all" method="GET" target="_blank">
+                <button>GET request on URL "/"</button>
+            </form>
+        </li>
+        <li>
+            Request to the "all" methods page
+            <form action="/all" method="GET" target="_blank">
+                <button>GET request on URL "/all"</button>
+            </form>
+            <form action="/all" method="POST" target="_blank">
+                <button>POST request on URL "/all"</button>
+            </form>
+        </li>
+        <li>
+                Request to API Endpoint
+                <form action="/api/person/1" method="GET" target="_blank">
+                    <button>GET request on "/person/1"</button>
+                </form>
+                <form action="/api/person/2" method="GET" target="_blank">
+                    <button>GET request on "/person/2"</button>
+                </form>
+        </li>
+        <li>
+            Route paths based on string patterns
+            <ul>
+                Pattern "/ab?cd"
+                <li><a href="/acd" target="_blank">Request to "/acd"</a></li>
+                <li><a href="/abcd" target="_blank">Request to "/abcd"</a></li>
+            </ul>
+            <ul>
+                Pattern "/ef+gh"
+                <li><a href="/efgh" target="_blank">Request to "/efgh"</a></li>
+                <li><a href="/effffgh" target="_blank">Request to "/effffgh"</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
