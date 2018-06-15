@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="POST">
+            <fieldset>
+            <legend>Form</legend>
+
+            <p>
+                <label>Title:</label>
+                <input type="text" name="title"/>
+            </p>
+
+            <p>
+                <label>Body:</label>
+                <textarea name="content"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Save</button>
+            </p>
+
+            </fieldset>
+        </form>
+        <% if (typeof items !== "undefined") { %>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>
+                    Title
+                    </th>
+                    <th>
+                    Content
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% items.forEach(function(item) { %>
+                <tr>
+                    <td>
+                        <%= item.title %>
+                    </td>
+                    <td>
+                        <%= item.content %>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <% } %>
+    </body>
+</html>
