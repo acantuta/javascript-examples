@@ -6,7 +6,7 @@ var PostSchema = {
 };
 
 var Post = mongo.model('Post', PostSchema);
-
+// it's a comment.
 module.exports = {
     Post: Post
 };
